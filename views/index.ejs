@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <title>Avalaro Task!</title>
+</head>
+<style type="text/css">
+.btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #0000EE;
+    padding: 0;
+    text-decoration: underline;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn-link:active {
+    color: #FF0000;
+}
+
+</style>
+
+<body>
+    <a href='/'> Back to the start</a>
+    <table border="1">
+        <tr>
+            <th></th>
+            <th>
+                <% if (currentStory.LayoutT) { %>
+                <form action='/queryPath' method='post'>
+                    <input type="hidden" name="layout" value="T">
+                    <button class="btn-link">
+                        <%= currentStory.LayoutT.text %></button>
+                </form>
+                <% } else { %>
+                <form action='/submitStory' method='post'>
+                    <input type="hidden" name="layout" value="T">
+                    <textarea name='story'></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                <% }  %>
+            </th>
+            <th>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <% if (currentStory.LayoutL) { %>
+                <form action='/queryPath' method='post'>
+                    <input type="hidden" name="layout" value="L">
+                    <button class="btn-link">
+                        <%= currentStory.LayoutL.text %></button>
+                </form>
+                <% } else { %>
+                <form action='/submitStory' method='post'>
+                    <input type="hidden" name="layout" value="L">
+                    <textarea name='story'></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                <% }  %>
+            </th>
+            <th align="middle">
+                <p>
+                    <%= currentStory.text %>
+                </p>
+            </th>
+            <th>
+                <% if (currentStory.LayoutR) { %>
+                <form action='/queryPath' method='post'>
+                    <input type="hidden" name="layout" value="R">
+                    <button class="btn-link">
+                        <%= currentStory.LayoutR.text %></button>
+                </form>
+                <% } else { %>
+                <form action='/submitStory' method='post'>
+                    <input type="hidden" name="layout" value="R">
+                    <textarea name='story'></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                <% }  %>
+            </th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>
+                <% if (currentStory.LayoutB) { %>
+                <form action='/queryPath' method='post'>
+                    <input type="hidden" name="layout" value="B">
+                    <button class="btn-link">
+                        <%= currentStory.LayoutB.text %></button>
+                </form>
+                <% } else { %>
+                <form action='/submitStory' method='post'>
+                    <input type="hidden" name="layout" value="B">
+                    <textarea name='story'></textarea>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                <% }  %>
+            </th>
+            <th></th>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "author": "",
+  "_where": "/home/lap53_claysol/Public/cms/serverless/editplaylist",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^3.1.6",
+    "express": "^4.16.4"
+  },
+  "description": "Test AVALARA",
+  "main": "index.js",
+  "name": "AVALARA",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
